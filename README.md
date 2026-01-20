@@ -4,6 +4,7 @@ This project is a collaboration between Frankie Antonie and Adil Ali Khan
 # Personal Hub
 
 A centralized productivity and lifestyle dashboard designed to keep your tasks, goals, and interests organized in one place.
+This project will be made in Python using the tkinter library.
 
 ## Features
 
@@ -11,7 +12,6 @@ A centralized productivity and lifestyle dashboard designed to keep your tasks, 
 - **Task Agenda / To‑Do List**
   - **Daily Tasks**
   - **Future Tasks**
-
 - **Goals List**
   - **Short‑Term Goals**
   - **Long‑Term Goals**
