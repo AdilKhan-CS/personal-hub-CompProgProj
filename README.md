@@ -7,36 +7,25 @@ A centralized productivity and lifestyle dashboard designed to keep your tasks, 
 
 ## Features
 
-### To‑Do & Goals Management
-- **To‑Do List**
+### Task Planning & Goals Management
+- ***Task Agenda / To‑Do List**
+  - **Daily Tasks**
+  - **Future Tasks**
+
 - **Goals List**
+  - **Short‑Term Goals**
+  - **Long‑Term Goals**
 
-### Task Planning
-- **Daily Tasks**
-- **Future Tasks**
-
-### Goal Tracking
-- **Short‑Term Goals**
-- **Long‑Term Goals**
-
-### Additional Workspace
-- **Separate Tab (Name TBD)**
-
-### Daily Inspiration
+### Personalized Workspace (Ideas can change)
 - **Daily Quote**
-
-### UFC Stat Tracker
-- Track fighters, match history, rankings, and favorites.
-
-### Movie Recommendation System
-- Personalized movie suggestions based on preferences.
-
----
+- **Movie Recommendation System**
+  - Personalized movie suggestions based on preferences.
+- **UFC Stat Tracker**
+  - Track fighters, match history, rankings, and favorites.
 
 ## Future Enhancements
 - UI/UX improvements  
 - Custom themes  
-- AI‑powered insights  
 
 ---
 
