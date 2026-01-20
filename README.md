@@ -8,7 +8,7 @@ A centralized productivity and lifestyle dashboard designed to keep your tasks, 
 ## Features
 
 ### Task Planning & Goals Management
-- ***Task Agenda / To‑Do List**
+- **Task Agenda / To‑Do List**
   - **Daily Tasks**
   - **Future Tasks**
 
