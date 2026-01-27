@@ -1,5 +1,5 @@
 # programming-projects-lab
-This project is a collaboration between Frankie Antoine and Adil Ali Khan
+This project is a collaboration between Frankie Antoine, Adil Ali Khan and Arsham
 
 # Personal Hub
 
