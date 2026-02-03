@@ -17,8 +17,6 @@ A centralized lifestyle dashboard designed to keep your tasks, goals, and intere
 - Sport Stat Tracker
   - Track fighters, match history, rankings, and favorites.
 
- ## Known Limitations
- -
 
 # Future Enhancements
 - [ ] UI/UX improvements
@@ -29,19 +27,19 @@ A centralized lifestyle dashboard designed to keep your tasks, goals, and intere
 > \>= tkinter
 
 ```
-python3 -m app
+python3 -m app.py
 ```
 ---
 
-## Known Limitations
-- # Project Homescreen does not support specified project description
+# Known Limitations
+- Project Homescreen does not support specified project description
   - Cannot go to goals/to-do list tab
   - Cannot go to go to personal tab
-- # Goals/to-do list tab does not support specified project description
+- Goals/to-do list tab does not support specified project description
   - Cannot create goals
   - Cannot see goals
   - Storing tasks is not persistant
-- # Personal tab does not support specified project description
+- Personal tab does not support specified project description
   - Cannot see or edit UFC stat tracker
   - Cannot see or edit quotes section
   - Cannor see or edit movie recommendations sections
