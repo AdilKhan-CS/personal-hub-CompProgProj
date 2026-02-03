@@ -33,5 +33,21 @@ python3 -m app
 ```
 ---
 
+## Known Limitations
+- # Project Homescreen does not support specified project description
+  - Cannot go to goals/to-do list tab
+  - Cannot go to go to personal tab
+- # Goals/to-do list tab does not support specified project description
+  - Cannot create goals
+  - Cannot see goals
+  - Storing tasks is not persistant
+- # Personal tab does not support specified project description
+  - Cannot see or edit UFC stat tracker
+  - Cannot see or edit quotes section
+  - Cannor see or edit movie recommendations sections
+
 ## 📌 Project Status
+Cannot currently run most or any of the project specifications
+
+## 📌 Development Status
 Actively under development.
