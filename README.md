@@ -1,5 +1,5 @@
 # programming-projects-lab
-This project is a collaboration between Frankie Antoine and Adil Ali Khan
+This project is a collaboration between Frankie Antoine, Adil Ali Khan and Aryam Sharma
 
 # Personal Hub
 A centralized lifestyle dashboard designed to keep your tasks, goals, and interests organized in one place. This project will be made in Python using the tkinter library.
