@@ -30,6 +30,9 @@ A centralized lifestyle dashboard designed to keep your tasks, goals, and intere
 - Sport Stat Tracker
   - Track fighters, match history, rankings, and favorites.
 
+# Project structure
+- The logic that deals with the whole project is in the app.py file
+- The quotes.json and movies.json files contain the quotes and movies for the app to show
 
 # Future Enhancements
 - [ ] UI/UX improvements
