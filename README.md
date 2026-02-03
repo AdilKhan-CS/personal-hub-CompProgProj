@@ -1,32 +1,36 @@
 # programming-projects-lab
-This project is a collaboration between Frankie Antoine, Adil Ali Khan and Arsham
+This project is a collaboration between Frankie Antoine and Adil Ali Khan
 
 # Personal Hub
+A centralized lifestyle dashboard designed to keep your tasks, goals, and interests organized in one place. This project will be made in Python using the tkinter library.
 
-A centralized productivity and lifestyle dashboard designed to keep your tasks, goals, and interests organized in one place.
-This project will be made in Python using the tkinter library.
+## Task Planning & Goals Management
+- Task Agenda / To‑Do List
+- Goals List
 
-## Features
+## Personalized Workspace
+- Daily Quotes
 
-### Task Planning & Goals Management
-- **Task Agenda / To‑Do List**
-  - **Daily Tasks**
-  - **Future Tasks**
-- **Goals List**
-  - **Short‑Term Goals**
-  - **Long‑Term Goals**
-
-### Personalized Workspace (Ideas can change)
-- **Daily Quote**
-- **Movie Recommendation System**
+- Movie Recommendation System
   - Personalized movie suggestions based on preferences.
-- **UFC Stat Tracker**
+
+- Sport Stat Tracker
   - Track fighters, match history, rankings, and favorites.
 
-## Future Enhancements
-- UI/UX improvements  
-- Custom themes  
+ ## Known Limitations
+ -
 
+# Future Enhancements
+- [ ] UI/UX improvements
+- [ ] Custom themes
+
+# Usage & Requirements
+> \>= python3.12 \
+> \>= tkinter
+
+```
+python3 -m app
+```
 ---
 
 ## 📌 Project Status
