@@ -1,6 +1,19 @@
 # programming-projects-lab
 This project is a collaboration between Frankie Antoine, Adil Ali Khan and Aryam Sharma
 
+# How to create your own build
+There are two ways to create your own build for this project.
+1) Download the code directly off of github as a zip file and add it manually to your IDE
+2) Clone the git repositoy through your IDE (ex. VScode)
+
+To download it manually, click on the green code button on the section below the project name and click download zip from the drop down menu.
+
+To Clone your own repositoy to differs from IDE to IDE but in VScode you have to go to the terminal and enter the following:
+```
+git clone https://github.com/AdilKhan-CS/personal-hub-CompProgProj.git
+```
+To run it, once the code is on your device all you have to do is go to app.py and run the code.
+
 # Personal Hub
 A centralized lifestyle dashboard designed to keep your tasks, goals, and interests organized in one place. This project will be made in Python using the tkinter library.
 
