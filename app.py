@@ -1,27 +1,59 @@
 import tkinter as tk
-import json
-import random
 from tkinter import messagebox
 
-def show_message():
-    text_box.delete("1.0", tk.END)
-
 root = tk.Tk()
-root.title("quote display")
-root.geometry("1280x760")
+root.title("To-Do List")
+root.geometry("500x600")
+root.config(bg="#f0f0f0")
 
-with open('quotes.json') as f:
-    quotes_data = json.load(f)  
+# Store tasks in a list
+tasks = []
 
-text_box = tk.Text(root, wrap=tk.WORD, font=("Arial", 12))
-text_box.pack(pady=20)
+# Title label
+title = tk.Label(root, text="My Task Agenda", font=("Arial", 18, "bold"), bg="#f0f0f0")
+title.pack(pady=10)
 
-def show_message():
-    text_box.delete("1.0", tk.END)
-    quote = random.choice(quotes_data)
-    text_box.insert("1.0", quote)
+# Frame for input
+input_frame = tk.Frame(root, bg="#f0f0f0")
+input_frame.pack(pady=10)
 
-button = tk.Button(root, text="Show Quote", command=show_message)
-button.pack()
+task_entry = tk.Entry(input_frame, width=35, font=("Arial", 11))
+task_entry.pack(side=tk.LEFT, padx=5)
+
+# Add task to list and update display
+def add_task():
+    task = task_entry.get().strip()
+    if task:
+        tasks.append(task)
+        task_entry.delete(0, tk.END)
+        update_task_list()
+    else:
+        messagebox.showwarning("Empty Task", "Please enter a task")
+
+# Remove selected task from list
+def remove_task():
+    try:
+        index = task_listbox.curselection()[0]
+        tasks.pop(index)
+        update_task_list()
+    except IndexError:
+        messagebox.showwarning("No Selection", "Please select a task to remove")
+
+# Refresh the task display
+def update_task_list():
+    task_listbox.delete(0, tk.END)
+    for task in tasks:
+        task_listbox.insert(tk.END, task)
+
+add_btn = tk.Button(input_frame, text="Add Task", command=add_task, bg="#4CAF50", fg="white", font=("Arial", 10))
+add_btn.pack(side=tk.LEFT, padx=5)
+
+# Listbox to display tasks
+task_listbox = tk.Listbox(root, font=("Arial", 11), height=15, bg="white")
+task_listbox.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
+
+# Remove task button
+remove_btn = tk.Button(root, text="Remove Task", command=remove_task, bg="#f44336", fg="white", font=("Arial", 10))
+remove_btn.pack(pady=10)
 
 root.mainloop()
