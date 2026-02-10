@@ -4,6 +4,8 @@ import json
 import os
 
 class PersonalHubApp:
+
+    # Constructor for PersonalHubApp Class
     def __init__(self, root):
         self.root = root
         self.root.title("Personal Hub")
@@ -11,7 +13,7 @@ class PersonalHubApp:
         self.root.config(bg="#f0f0f0")
         
         # File path for storing data persistently
-        self.data_file = "personal_hub_data.json"
+        self.data_file = "data_files\\personal_hub_data.json"
         
         # Load tasks and goals from file, or create empty lists if file doesn't exist
         self.tasks = []
@@ -69,57 +71,77 @@ class PersonalHubApp:
         container = tk.Frame(self.root, bg="#f0f0f0")
         container.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
         
-        # LEFT SIDE - Task Agenda
+        # ======= LEFT SIDE - Task Agenda =======
+
+        # Background for Task agenda
         task_frame = tk.Frame(container, bg="#f0f0f0", relief=tk.RIDGE, bd=2)
         task_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 10))
         
+        # Title for Task agenda
         task_title = tk.Label(task_frame, text="📋 Task Agenda", font=("Arial", 16, "bold"), bg="#f0f0f0")
         task_title.pack(pady=10)
         
+        # Input line for Task agenda
         task_input_frame = tk.Frame(task_frame, bg="#f0f0f0")
         task_input_frame.pack(pady=5)
         
+        # Size of task agenda tab
         self.task_entry = tk.Entry(task_input_frame, width=25, font=("Arial", 10))
         self.task_entry.pack(side=tk.LEFT, padx=5)
         
+        # Add task button for Task agenda
         add_task_btn = tk.Button(task_input_frame, text="Add", command=self.add_task, 
                                 bg="#4CAF50", fg="white", font=("Arial", 9))
         add_task_btn.pack(side=tk.LEFT)
         
+        # Output for tasks for Task agenda
         self.task_listbox = tk.Listbox(task_frame, font=("Arial", 10), height=15, bg="white")
         self.task_listbox.pack(pady=5, padx=10, fill=tk.BOTH, expand=True)
         
+        # Remove task Button for Task agenda
         remove_task_btn = tk.Button(task_frame, text="Remove Task", command=self.remove_task,
                                     bg="#f44336", fg="white", font=("Arial", 9))
         remove_task_btn.pack(pady=5)
+
+        # ======= RIGHT SIDE - Goals List =======
         
-        # RIGHT SIDE - Goals List
+        # Background for goals list
         goals_frame = tk.Frame(container, bg="#f0f0f0", relief=tk.RIDGE, bd=2)
         goals_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(10, 0))
         
+        # Title for Goals list
         goals_title = tk.Label(goals_frame, text="🎯 Goals List", font=("Arial", 16, "bold"), bg="#f0f0f0")
         goals_title.pack(pady=10)
         
+        # Input line for Goals list
         goals_input_frame = tk.Frame(goals_frame, bg="#f0f0f0")
         goals_input_frame.pack(pady=5)
         
+        # Size of goals list tab
         self.goals_entry = tk.Entry(goals_input_frame, width=25, font=("Arial", 10))
         self.goals_entry.pack(side=tk.LEFT, padx=5)
         
+        # Add goal button for Goals list
         add_goal_btn = tk.Button(goals_input_frame, text="Add", command=self.add_goal,
                                 bg="#2196F3", fg="white", font=("Arial", 9))
         add_goal_btn.pack(side=tk.LEFT)
         
+        # Output for goals in Goals list
         self.goals_listbox = tk.Listbox(goals_frame, font=("Arial", 10), height=15, bg="white")
         self.goals_listbox.pack(pady=5, padx=10, fill=tk.BOTH, expand=True)
         
+        # Remove goal button for Goals list
         remove_goal_btn = tk.Button(goals_frame, text="Remove Goal", command=self.remove_goal,
                                     bg="#f44336", fg="white", font=("Arial", 9))
         remove_goal_btn.pack(pady=5)
+
+        # ===== BOTTOM - Personal Workspace =====
         
+        # White space for personal workspace button
         nav_frame = tk.Frame(self.root, bg="#f0f0f0")
         nav_frame.pack(pady=15)
         
+        # Personal workspace button to go to personal workspace
         workspace_btn = tk.Button(nav_frame, text="Go to Personalized Workspace →", 
                                 command=self.show_personalized_workspace,
                                 bg="#9C27B0", fg="white", font=("Arial", 11, "bold"),
@@ -130,6 +152,7 @@ class PersonalHubApp:
         self.update_task_list()
         self.update_goals_list()
     
+    # Add task function for the Task agenda
     def add_task(self):
         task = self.task_entry.get().strip()
         if task:
@@ -159,6 +182,9 @@ class PersonalHubApp:
             self.task_listbox.insert(tk.END, task)
     
     def add_goal(self):
+        """Once there is input from the entry line, 
+        input the goal into the personal_hub_data.json file and update the goals tab.
+        Has an output if no input was given."""
         goal = self.goals_entry.get().strip()
         if goal:
             self.goals.append(goal)
@@ -168,6 +194,7 @@ class PersonalHubApp:
         else:
             messagebox.showwarning("Empty Goal", "Please enter a goal")
     
+    # Remove Goal function for the Goals list
     def remove_goal(self):
         """Remove the currently selected goal from the listbox.
         Uses try-except because curselection() raises IndexError if nothing is selected."""
@@ -204,6 +231,7 @@ class PersonalHubApp:
                             padx=20, pady=10)
         back_btn.pack(pady=20)
 
+# Main function
 if __name__ == "__main__":
     root = tk.Tk()
     app = PersonalHubApp(root)
