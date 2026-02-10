@@ -60,19 +60,7 @@ class PersonalHubApp:
         for widget in self.root.winfo_children():
             widget.destroy()
     
-    def show_main_hub(self):
-        """Build and display the main hub interface with side-by-side task and goals sections"""
-        self.clear_window()
-        
-        title = tk.Label(self.root, text="Personal Hub", font=("Arial", 22, "bold"), bg="#f0f0f0")
-        title.pack(pady=15)
-        
-        # Create container to hold both task and goals frames side by side
-        container = tk.Frame(self.root, bg="#f0f0f0")
-        container.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
-        
-        # ======= LEFT SIDE - Task Agenda =======
-
+    def create_task_agenda(self, container):
         # Background for Task agenda
         task_frame = tk.Frame(container, bg="#f0f0f0", relief=tk.RIDGE, bd=2)
         task_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 10))
@@ -103,8 +91,7 @@ class PersonalHubApp:
                                     bg="#f44336", fg="white", font=("Arial", 9))
         remove_task_btn.pack(pady=5)
 
-        # ======= RIGHT SIDE - Goals List =======
-        
+    def create_goals_list(self, container):
         # Background for goals list
         goals_frame = tk.Frame(container, bg="#f0f0f0", relief=tk.RIDGE, bd=2)
         goals_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(10, 0))
@@ -134,9 +121,8 @@ class PersonalHubApp:
         remove_goal_btn = tk.Button(goals_frame, text="Remove Goal", command=self.remove_goal,
                                     bg="#f44336", fg="white", font=("Arial", 9))
         remove_goal_btn.pack(pady=5)
-
-        # ===== BOTTOM - Personal Workspace =====
-        
+    
+    def create_personal_workspace(self):
         # White space for personal workspace button
         nav_frame = tk.Frame(self.root, bg="#f0f0f0")
         nav_frame.pack(pady=15)
@@ -147,6 +133,26 @@ class PersonalHubApp:
                                 bg="#9C27B0", fg="white", font=("Arial", 11, "bold"),
                                 padx=20, pady=10)
         workspace_btn.pack()
+    def show_main_hub(self):
+        """Build and display the main hub interface with side-by-side task and goals sections"""
+        self.clear_window()
+        
+        title = tk.Label(self.root, text="Personal Hub", font=("Arial", 22, "bold"), bg="#f0f0f0")
+        title.pack(pady=15)
+        
+        # Create container to hold both task and goals frames side by side
+        container = tk.Frame(self.root, bg="#f0f0f0")
+        container.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
+        
+        # ======= LEFT SIDE - Task Agenda =======
+
+        self.create_task_agenda(container)
+
+        # ======= RIGHT SIDE - Goals List =======
+        self.create_goals_list(container)
+
+        # ===== BOTTOM - Personal Workspace =====
+        self.create_personal_workspace()
         
         # Populate the listboxes with current data
         self.update_task_list()
