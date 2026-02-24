@@ -5,30 +5,36 @@ import os
 
 def addTaskChecker(task):
     """Checks if the task input is valid (not empty or just whitespace)"""
-    with open("data_files/personal_hub_data.json", "a") as f:
-        if task.strip():
-            f.write(task + "\n")
-            return True
-        else:
-            return False
+    f_a = open("data_files/personal_hub_data.json", "r")
+    data = json.loads(f_a.read())
+
+    if task.strip():
+        data["tasks"] += [task]
+        print(data)
+        json.dump(data, open("data_files/personal_hub_data.json", "w"), indent=4)
+        return True
+    else:
+        return False
 
 def removeTaskChecker(task):
     """Checks if the task input is valid for removal (exists in file)"""
-    with open("data_files/personal_hub_data.json", "r") as f:
-        tasks = f.read().splitlines()
-    if task in tasks:
-        tasks.remove(task)
-        with open("data_files/personal_hub_data.json", "w") as f:
-            f.write("\n".join(tasks) + "\n")
+    f_a = open("data_files/personal_hub_data.json", "r")
+    data = json.loads(f_a.read())
+
+    if task in data["tasks"]:
+        data["tasks"].remove(task)
+        json.dump(data, open("data_files/personal_hub_data.json", "w"), indent=4)
         return True
     else:
         return False
 
 def doesTaskExist(task):
     """Helper function to check if a task exists in the file"""
-    with open("data_files/personal_hub_data.json", "r") as f:
-        tasks = f.read().splitlines()
-    return task in tasks
+    f_a = open("data_files/personal_hub_data.json", "r")
+    data = json.loads(f_a.read())
+
+    return task in data["tasks"]
+
 class PersonalHubApp:
 
     # Constructor for PersonalHubApp Class
