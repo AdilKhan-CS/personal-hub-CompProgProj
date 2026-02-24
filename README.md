@@ -46,7 +46,7 @@ A centralized lifestyle dashboard designed to keep your tasks, goals, and intere
 python3 -m app.py
 
 How to Run Tests:
- - python3 tests.py
+ - python3 test.py
 ```
 ---
 
