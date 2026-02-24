@@ -40,13 +40,15 @@ A centralized lifestyle dashboard designed to keep your tasks, goals, and intere
 
 # Usage & Requirements
 > \>= python3.12 \
-> \>= tkinter
+> \>= tkinter \
+> \>= pytest
 
 ```
 python3 -m app.py
 
-How to Run Tests:
- - python3 test.py
+How to run tests:
+1. cd into the correct folder location
+2. run pytest
 ```
 ---
 
