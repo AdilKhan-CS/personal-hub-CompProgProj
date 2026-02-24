@@ -3,6 +3,32 @@ from tkinter import messagebox
 import json
 import os
 
+def addTaskChecker(task):
+    """Checks if the task input is valid (not empty or just whitespace)"""
+    with open("data_files/personal_hub_data.json", "a") as f:
+        if task.strip():
+            f.write(task + "\n")
+            return True
+        else:
+            return False
+
+def removeTaskChecker(task):
+    """Checks if the task input is valid for removal (exists in file)"""
+    with open("data_files/personal_hub_data.json", "r") as f:
+        tasks = f.read().splitlines()
+    if task in tasks:
+        tasks.remove(task)
+        with open("data_files/personal_hub_data.json", "w") as f:
+            f.write("\n".join(tasks) + "\n")
+        return True
+    else:
+        return False
+
+def doesTaskExist(task):
+    """Helper function to check if a task exists in the file"""
+    with open("data_files/personal_hub_data.json", "r") as f:
+        tasks = f.read().splitlines()
+    return task in tasks
 class PersonalHubApp:
 
     # Constructor for PersonalHubApp Class
