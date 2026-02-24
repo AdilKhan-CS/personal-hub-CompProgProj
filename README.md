@@ -44,17 +44,15 @@ A centralized lifestyle dashboard designed to keep your tasks, goals, and intere
 
 ```
 python3 -m app.py
+
+How to Run Tests:
+ - python3 tests.py
 ```
 ---
 
 # Known Limitations
 - Project Homescreen does not support specified project description
-  - Cannot go to goals/to-do list tab
   - Cannot go to go to personal tab
-- Goals/to-do list tab does not support specified project description
-  - Cannot create goals
-  - Cannot see goals
-  - Storing tasks is not persistant
 - Personal tab does not support specified project description
   - Cannot see or edit UFC stat tracker
   - Cannot see or edit quotes section
