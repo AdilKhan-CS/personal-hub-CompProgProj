@@ -16,6 +16,9 @@ def addTaskChecker(task):
     else:
         return False
 
+def tmp(x):
+    return x + 1
+
 def removeTaskChecker(task):
     """Checks if the task input is valid for removal (exists in file)"""
     f_a = open("data_files/personal_hub_data.json", "r")
