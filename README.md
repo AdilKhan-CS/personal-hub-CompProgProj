@@ -1,6 +1,10 @@
 # programming-projects-lab
 This project is a collaboration between Frankie Antoine, Adil Ali Khan and Aryam Sharma
 
+# How to Install
+1) Go to releases
+2) install
+
 # How to create your own build
 There are two ways to create your own build for this project.
 1) Download the code directly off of github as a zip file and add it manually to your IDE
