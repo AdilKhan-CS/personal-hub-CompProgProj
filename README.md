@@ -1,7 +1,20 @@
 # programming-projects-lab
 This project is a collaboration between Frankie Antoine, Adil Ali Khan and Aryam Sharma
 
-# How to create your own build
+# How to run the build using docker
+To run the app using docker, you need to build the app using the docker file and run the command provided
+
+To build the files, go into the docker file and run:
+```
+docker build -t app .
+```
+
+To run the docker file, go into docker and run:
+```
+docker app
+```
+
+# How to create your own build using a visual environment
 There are two ways to create your own build for this project.
 1) Download the code directly off of github as a zip file and add it manually to your IDE
 2) Clone the git repositoy through your IDE (ex. VScode)
@@ -58,17 +71,12 @@ How to run tests:
 ---
 
 # Known Limitations
-- Project Homescreen does not support specified project description
-  - Cannot go to go to personal tab
-- Personal tab does not support specified project description
-  - Cannot see or edit UFC stat tracker
-  - Cannot see or edit quotes section
-  - Cannor see or edit movie recommendations sections
+- Cannot order the goals/tasks like "1) ... 2)..."
+- Cannot drag goals to a specific order
 
 ## 📌 Project Status
-Cannot currently run most or any of the project specifications
+- Can run all of the project specifications
+- Refining is not complete
 
 ## 📌 Development Status
 Actively under development.
-
-this is a test
