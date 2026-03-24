@@ -1,0 +1,12 @@
+The performance metric is the execution time.
+
+Tool used to profile was python's inbuilt cProfile.
+
+RESULTS
+The most notable function that took the longest time was save_json and save_hub
+which took the total time of 0.006, 0.005 seconds. While there were others such
+as btn which took 0.005 seconds, which is expected due to the GUI rendering
+controlled by Tkinter.
+
+Most other functions execute in negligible time (<0.001 seconds) which indicates
+the program is disk bound, as evidenced by the save_json function, rather than CPU bound.
