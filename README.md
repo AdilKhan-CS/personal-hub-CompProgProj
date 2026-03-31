@@ -79,4 +79,6 @@ How to run tests:
 - Refining is not complete
 
 ## 📌 Development Status
-Actively under development.
+Added a benchmark to see how fast the code runs
+
+Optimised function calls for future releases

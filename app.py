@@ -150,7 +150,8 @@ class PersonalHubApp:
 		self.root.config(bg=BG)
 		self.root.resizable(True, True)
 
-		self._ensure_data_dir()
+		# self._ensure_data_dir()
+		os.makedirs("data_files", exist_ok=True)
 
 		data = load_json(DATA_FILE, DEFAULT_DATA)
 		self.tasks    = data.get("tasks",    [])
