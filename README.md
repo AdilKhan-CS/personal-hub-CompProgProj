@@ -81,4 +81,4 @@ How to run tests:
 ## 📌 Development Status
 Added a benchmark to see how fast the code runs
 
-Optimised function calls for future releases
+Optimised function calls for future releases, reduced _ensure_data_dir func call from 1 to 0.
