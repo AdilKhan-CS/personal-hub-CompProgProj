@@ -1,13 +1,23 @@
 REFLECTION
-When givin the opportunity to create a visual project, we believe
+When given the opportunity to create a visual project, we believe
 writing a GUI project in python was the right thing to do. Even though
-we though we are trading off speed for ease of writing, it was the right
+we are trading off speed for ease of writing, it was the right
 option as this program was a prototype and was never meant to use a lot
-of processing power to run.
+of processing power to run. The hardest task when working on this project 
+was getting used to all of the new libraries and apps like tkinter and 
+docker. We all learned docker for the first time during this lab and only 
+one of us knew tkinter before this lab. It was a leanrning curve and now 
+we can say that we can atleast use both of these items with somewhat 
+certainty. Continuing to work on this project would provide great leanrning
+experience and possibly something we could put on our resume.
 
 Given another opportunity, we would work on making the code more readable
 via splitting up the code files and writing code that doesn't need comments.
+By doing this we could also split up workflows so everyone controls their
+own section instead of having one file everyone has to trade off woking on.
 
 FUTURE WORK
 We should be able to add more features and maybe add the ability to
-switch languages into french and others.
+switch languages into french and others. There are a few change ideas 
+but would go much past the scope of this lab. Hopefully we can turn this 
+app into something we can all use on a daily bases in the future.
