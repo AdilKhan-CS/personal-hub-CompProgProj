@@ -1,0 +1,10 @@
+REFLECTION
+When givin the opportunity to create a visual project, we believe
+writing a GUI project in python was the right thing to do. Even though
+we though we are trading off speed for ease of writing, it was the right
+option as this program was a prototype and was never meant to use a lot
+of processing power to run.
+
+FUTURE WORK
+We should be able to add more features and maybe add the ability to
+switch languages into french and others.
