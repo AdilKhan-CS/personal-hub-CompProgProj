@@ -76,9 +76,8 @@ How to run tests:
 
 ## 📌 Project Status
 - Can run all of the project specifications
-- Refining is not complete
 
 ## 📌 Development Status
-Added a benchmark to see how fast the code runs
+Download the offical release [here](https://github.com/AdilKhan-CS/personal-hub-CompProgProj/releases/tag/production)
 
-Optimised function calls for future releases, reduced _ensure_data_dir func call from 1 to 0.
+Optimized function calls for future releases, reduced _ensure_data_dir func call from 1 to 0.
